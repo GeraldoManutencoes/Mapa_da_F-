@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html{
     font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 main{
@@ -26,10 +29,9 @@ nav{
 }
 
 a{
-    text-shadow: 0px 0px 15px black;
     text-decoration: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 10px;
     margin-left: 15px;
     margin-right: 20px;
@@ -43,19 +45,45 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 20px;
+}
+
+.__shadow{
+    text-shadow: 5px 5px 10px black, 
+                -5px -5px 10px black,
+                0px 5px 10px black,
+                5px 0px 10px black;
 }
 
 h1{
-    font-size: 6rem;
-    text-shadow: 0px 0px 15px black;
+    font-size: 5rem;
+    font-weight: normal;
 }
 
-input{
-    display: block;
-    width: 50%;
-    margin: 0 auto;
+p{
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.btn{
+    margin: 5px 0px;
+}
+
+button{
+    color: yellow;
+    padding: 15px 30px;
+    background-color: transparent;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1.4px;
+    cursor: pointer;
     border: 0;
-    outline: none;
-    padding: 10px 20px;
-    border-radius: 10px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    font-size: 1.2rem;
+    transition: box-shadow .5s ease;
+}
+
+button:hover{
+    border: 2px solid white;
+    box-shadow: 0px 0px 20px 5px white;
 }
