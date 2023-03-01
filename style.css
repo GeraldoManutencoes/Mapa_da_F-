@@ -87,3 +87,9 @@ button:hover{
     border: 2px solid white;
     box-shadow: 0px 0px 20px 5px white;
 }
+
+@media (min-width: 1400px){
+    html{
+        font-size: 35px;
+    }
+}
