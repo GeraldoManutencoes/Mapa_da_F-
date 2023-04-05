@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <script>
+        const successCallback = async (position) => {
+            const pos = {
+                lat: position.coords.latitude,
+                log: position.coords.longitude,
+            }
+            const req = await fetch("http://localhost:8080/" + pos.lat + "/" + pos.log);
+            const res = await req.json();
+
+            console.log(res)
+        };
+
+        const errorCallback = async (error) => {
+            const pos = {
+                lat: -24.6025035,
+                log: -52.2905127,
+            }
+            const req = await fetch("http://localhost:8080/" + pos.lat+ "/" + pos.log);
+            const res = await req.json();
+        };
+
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    </script>
+</body>
+</html>
